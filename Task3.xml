@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<run>
+	<id>R16</id>
+	<name>Test Run Anastasiya</name>
+	<description>Ntcnbhjdfybt zqwf</description>
+	<config></config>
+	<createdon>2018-06-10T09:59:16Z</createdon>
+		<completed>false</completed>
+		<milestone></milestone>
+	<stats>
+										<passed>
+			<percent>80</percent>
+			<count>12</count>
+		</passed>
+											<blocked>
+			<percent>0</percent>
+			<count>0</count>
+		</blocked>
+											<untested>
+			<percent>0</percent>
+			<count>0</count>
+		</untested>
+											<retest>
+			<percent>0</percent>
+			<count>0</count>
+		</retest>
+											<failed>
+			<percent>20</percent>
+			<count>3</count>
+		</failed>
+																																																				</stats>	<sections>
+		<section>
+		<name>Vika</name>
+		<description></description>
+									</section>
+		<section>
+		<name>Anastasiya</name>
+		<description>Тестирование куриного яйца</description>
+						<tests>
+																																										<test>
+				<id>T950</id>
+				<title>Проверка существования птицефабрики</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>1. Прочитать название производителя на упаковке, в котором находится яйцо
+2. Найти сайт производителя в интернете
+3. Проверить реквизиты предприятия на сайте налоговой службы
+4. Проверить указанное на сайте местоположение с действительным
+5. Посмотреть историю предприятия</steps>
+										<expected>У производителя имеется собственный сайт 
+Компания существует на рынке не один день
+Местоположение предприятия совпадает с действительным
+Компания не находится в стадии банкротства
+</expected>
+									</custom>
+												<caseid>C401</caseid>
+								<status>Passed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:03:37Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>У производителя АО «Птицефабрика «Евсинская» имеется собственный сайт
+Компания существует на рынке 40 лет
+Местоположение предприятия совпадает с действительным
+Компания не находится в стадии банкротства</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T951</id>
+				<title>Проверка категории</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>Номер категории яйца, указанной на упаковке, должен совпадать с номером категории, указанном на самом яйце</steps>
+										<expected>Номер категории яйца, указанной на упаковке совпадает с номером категории, указанном на самом яйце</expected>
+									</custom>
+												<caseid>C402</caseid>
+								<status>Passed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:04:53Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>Номер категории яйца, указанной на упаковке совпадает с номером категории, указанном на самом яйце</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T952</id>
+				<title>Проверка массы</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>1. Посмотреть на категорию яйца
+2. Зайти на сайт производителя и посмотреть норму массы одного яйца в зависимости от категории
+3. Взвесить яйцо на весах</steps>
+										<expected>Масса одного яйца находится в допустимых пределах массы яйца для данной категории, указанной на сайте производителя</expected>
+									</custom>
+												<caseid>C403</caseid>
+								<status>Passed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:05:43Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>Масса одного яйца находится в допустимых пределах массы яйца для данной категории, указанной на сайте производителя</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T953</id>
+				<title>Проверка на йодированность</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>1.Посмотреть, указанна ли на упаковке информация о том, что яйцо йодированное
+2. Посмотреть, есть ли на яйце пометка &quot;ЙОД&quot;</steps>
+										<expected>На упаковке указано, что яйцо йодированное, на яйце стоит пометка &quot;ЙОД&quot;</expected>
+									</custom>
+												<caseid>C404</caseid>
+								<status>Passed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:06:03Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>На упаковке указано, что яйцо йодированное, на яйце стоит пометка &quot;ЙОД&quot;</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T954</id>
+				<title>Проверка цвета</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>Проверить, имеет ли яйцо коричневый цвет</steps>
+										<expected>Цвет яйца коричневый</expected>
+									</custom>
+												<caseid>C405</caseid>
+								<status>Passed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:06:20Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>Цвет яйца коричневый</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T955</id>
+				<title>Проверка стандарта качества</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>1. Посмотреть номер СТО на упаковке
+2. Посмотреть в интернете, существует ли такой номер СТО
+</steps>
+										<expected>Данный номер СТО существует</expected>
+									</custom>
+												<caseid>C406</caseid>
+								<status>Passed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:06:57Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>Номер СТО, указанный на упаковке существует</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T956</id>
+				<title>Проверка комплектности упаковки</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>1. Проверить указанное кол-во яиц на упаковке
+2. Открыть упаковку и посчитать кол-во яиц в ней
+3. Проверить соответствие посчитанного кол-ва яиц кол-ву яиц, указанному на упаковке</steps>
+										<expected>Кол-во яиц, указанное на упаковке соответствует действительному</expected>
+									</custom>
+												<caseid>C407</caseid>
+								<status>Failed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:08:14Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment>Кол-во яиц, указанное на упаковке 10шт. не соответствует действительному (в упаковке 9 шт.)
+
+Рекомендация: взять другую упаковку в магазине и повторить тестирование</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T957</id>
+				<title>Проверка дизайна упаковки</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>1. Посмотреть на дизайн упаковки яиц
+2. Зайти на сайт производителя яиц и сверить дизайн упаковки с его изображением в каталоге</steps>
+										<expected>Реальный дизайн упаковки яиц полностью соответствует изображению на сайте производителя</expected>
+									</custom>
+												<caseid>C408</caseid>
+								<status>Passed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:08:34Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>Реальный дизайн упаковки яиц полностью соответствует изображению на сайте производителя</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T958</id>
+				<title>Проверка срока годности</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>1. Проверить на упаковке, действителен ли срок годности яйца</steps>
+										<expected>Яйцо годно</expected>
+									</custom>
+												<caseid>C409</caseid>
+								<status>Passed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:08:50Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>Яйцо годно</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T959</id>
+				<title>Проверка целостности</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>1. Открыть упаковку
+2. Убедиться, что все яйца целые</steps>
+										<expected>Все яйца в упаковке целые</expected>
+									</custom>
+												<caseid>C410</caseid>
+								<status>Failed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:09:43Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment>В упаковке два яйца разбиты
+
+Рекомендация: Взять новую упаковку в магазине и повторить тестирование</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T960</id>
+				<title>Проверка размера</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>1. Открыть упаковку
+2. Убедиться, что все яйца имеют одинаковый рзмер</steps>
+										<expected>Яйца имеют одинаковый размер</expected>
+									</custom>
+												<caseid>C411</caseid>
+								<status>Passed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:09:59Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>Яйца имеют одинаковый размер</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T961</id>
+				<title>Проверка на хрупкость</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>Ударить яйцо об стол и посмотреть, разобьется или нет</steps>
+										<expected>Яйцо не разбилось, значит оно крепкое
+Яйцо разбилось, значит оно хрупкое</expected>
+									</custom>
+												<caseid>C412</caseid>
+								<status>Passed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:10:33Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>Яйцо разбилось, оно хрупкое</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T962</id>
+				<title>Проверка времени</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>1. Поместить яйцо в кастрюлю с водой
+2. Поставить кастрюлю вариться на огонь выше среднего 
+3. При закипании воды засечь время 7 минут
+4. Остудить яйцо
+5. Почистить яйцо
+6. Разрезать яйцо
+7. Проверить яйцо на плотность желтка</steps>
+										<expected>Желток яйца плотный, не жидкий, за данное время варки яйцо варится до готовности, до состояния вкрутую </expected>
+									</custom>
+												<caseid>C413</caseid>
+								<status>Passed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:12:01Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>После варки яйца его желток имеет плотную консистенцию. За данное время варки яйцо варится до готовности, до состояния вкрутую
+</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																																												<test>
+				<id>T963</id>
+				<title>Проверка чистки</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>1. Сварить яйцо
+2. Ударить яйцо об стол
+3. Проверить, легко ли чистится яйцо, снимается ли скорлупа вместе с пленкой</steps>
+										<expected>Скорлупа снялась вместе с пленкой, яйцо чистится легко</expected>
+									</custom>
+												<caseid>C414</caseid>
+								<status>Failed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:14:11Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment>
+
+Скорлупа снялась, но пленка осталась на яйце
+Яйцо плохо чистится
+
+Рекомендация: купить новые яйца и провести тестирование повторно
+</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2018-06-10T10:13:43Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>Скорлупа снялась, но пленка осталась на яйце
+Яйцо плохо чистится
+
+Рекомендация: купить новые яйца и провести тестирование повторно</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T964</id>
+				<title>Проверка вкуса</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>1. Сварить яйцо
+2. Почистить
+3. Съесть
+4. Оценить результат</steps>
+										<expected>Яйцо вкусное, можно и в дальнейшем покупать яйца этого производителя</expected>
+									</custom>
+												<caseid>C415</caseid>
+								<status>Passed</status>
+																<assignedto>Anastasiya</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2018-06-10T10:15:47Z</createdon>
+																		<createdby>Anastasiya</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>Яйцо вкусное, можно и в дальнейшем покупать яйца этого производителя</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+								</tests>
+							</section>
+</sections>
+</run>
