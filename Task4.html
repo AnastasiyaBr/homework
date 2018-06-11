@@ -1,0 +1,773 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:x="urn:schemas-microsoft-com:office:excel"
+      xmlns="http://www.w3.org/TR/REC-html40">
+    <head>
+        <title>IT-Academy Software testing</title>
+        <style type="text/css">
+         table {
+             mso-displayed-decimal-separator:"\,";
+             mso-displayed-thousand-separator:" ";
+         }
+         body
+         {
+             margin: 0px;
+             font-size: 12px;
+             font-family: Arial, sans-serif;
+             color:black;
+         }
+
+        </style>
+        <META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+        <!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+        <!--
+             Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+             since Excel does not use or save the css files it is hardcoded here.
+           -->
+        <style>
+         @page
+         {
+             mso-page-orientation:landscape;
+             margin:.25in .25in .5in .25in;
+             mso-header-margin:.5in;
+             mso-footer-margin:.25in;
+             mso-footer-data:"&R&P of &N";
+             mso-horizontal-page-align:center;
+             mso-vertical-page-align:center;
+         }
+
+         td.issuekey,
+         td.issuetype,
+         td.status {
+             mso-style-parent: "";
+             mso-number-format: \@;
+             text-align: left;
+         }
+         br
+         {
+             mso-data-placement:same-cell;
+         }
+
+         td
+         {
+             vertical-align: top;
+         }
+        </style>
+
+        <!--[if gte mso 9]><xml>
+            <x:ExcelWorkbook>
+            <x:ExcelWorksheets>
+            <x:ExcelWorksheet>
+            <x:Name>general_report</x:Name>
+            <x:WorksheetOptions>
+            <x:Print>
+            <x:ValidPrinterInfo/>
+            </x:Print>
+            </x:WorksheetOptions>
+            </x:ExcelWorksheet>
+            </x:ExcelWorksheets>
+            </x:ExcelWorkbook>
+            </xml><![endif]-->
+    <script type="text/javascript" src="http://ff.kis.v2.scr.kaspersky-labs.com/79018002-BE6B-6346-A06D-14870E7B7397/main.js" charset="UTF-8"></script></head>
+    <body>
+
+        <table border="1">
+            <tr bgcolor="#205081" height="30">
+                <td colspan="43">
+                    <img src="http://193.232.45.198:8080/images/icon-jira-logo.png" width="57" height="30" border="0" alt="IT-Academy Software testing">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="43">
+                    <a href="http://193.232.45.198:8080/issues/?jql=project+%3D+PJ+AND+resolution+%3D+Unresolved+AND+assignee+in+%28currentUser%28%29%29+order+by+updated+DESC">IT-Academy Software testing</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="43">
+                    Отображение <strong>6</strong> запросов в <strong>11/июн/18 12:09 PM</strong>.
+                </td>
+            </tr>
+        </table>
+
+        
+
+
+                            <issuetable-web-component>
+                <table id="issuetable"  border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-project" data-id="project">
+                            Проект
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                            Код
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-summary" data-id="summary">
+                            Тема
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                            Тип задачи
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-status" data-id="status">
+                            Статус
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-priority" data-id="priority">
+                            Приоритет
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolution" data-id="resolution">
+                            Решение
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-assignee" data-id="assignee">
+                            Исполнитель
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-reporter" data-id="reporter">
+                            Автор
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-creator" data-id="creator">
+                            Создатель
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-created" data-id="created">
+                            Cоздано
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-lastViewed" data-id="lastViewed">
+                            Последний просмотр
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-updated" data-id="updated">
+                            Обновленo
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolutiondate" data-id="resolutiondate">
+                            Дата решения
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-versions" data-id="versions">
+                            Затронуты версии
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-fixVersions" data-id="fixVersions">
+                            Исправлено в версиях
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-components" data-id="components">
+                            Компоненты
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-duedate" data-id="duedate">
+                            Срок исполнения
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-votes" data-id="votes">
+                            Голоса
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-watches" data-id="watches">
+                            Наблюдатели
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-thumbnail" data-id="thumbnail">
+                            Изображения
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeoriginalestimate" data-id="timeoriginalestimate">
+                            Первоначальная оценка
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeestimate" data-id="timeestimate">
+                            Оставшееся время
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timespent" data-id="timespent">
+                            Затраченное время
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-workratio" data-id="workratio">
+                            КПД (полезная работа/затраченная работа)
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-subtasks" data-id="subtasks">
+                            Подзадачи
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuelinks" data-id="issuelinks">
+                            Связанные задачи
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-environment" data-id="environment">
+                            Окружение
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-description" data-id="description">
+                            Описание
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-security" data-id="security">
+                            Уровень безопасности
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-progress" data-id="progress">
+                            Прогресс
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregateprogress" data-id="aggregateprogress">
+                            Суммарный прогресс
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimespent" data-id="aggregatetimespent">
+                            Суммарное затраченое время
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeestimate" data-id="aggregatetimeestimate">
+                            Суммарное оставшееся время
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeoriginalestimate" data-id="aggregatetimeoriginalestimate">
+                            Суммарная первоначальная оценка
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-labels" data-id="labels">
+                            Метки
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10005" data-id="customfield_10005">
+                            Рейтинг
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10006" data-id="customfield_10006">
+                            Исторические точки
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10000" data-id="customfield_10000">
+                            Ссылка на эпик
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10001" data-id="customfield_10001">
+                            Статус эпика
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10002" data-id="customfield_10002">
+                            Имя эпика
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10003" data-id="customfield_10003">
+                            Цвет эпика
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10004" data-id="customfield_10004">
+                            Спринт
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow10511" rel="10511" data-issuekey="PJ-12" class="issuerow">
+                                            <td class="project">    Papa Jones
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="PJ-12" href="http://193.232.45.198:8080/browse/PJ-12">PJ-12</a>
+</td>
+                                            <td class="summary"><p>
+                Валидация данных
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Анастасия Бритшева
+    </td>
+                                            <td class="reporter">            Анастасия Бритшева
+    </td>
+                                            <td class="creator">            Анастасия Бритшева
+    </td>
+                                            <td class="created"> 11/июн/18 10:22 AM </td>
+                                            <td class="lastViewed"> 11/июн/18 12:09 PM </td>
+                                            <td class="updated"> 11/июн/18 10:22 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      1. Выбираем любую продукцию на сайте.<br/>
+<br/>
+2. Добавляем в корзину.<br/>
+<br/>
+3. Нажимаем кнопку *{color:#14892c}Оформить заказ{color}*{color:#14892c}.{color}<br/>
+<br/>
+4. При вводе в разделе *{color:#14892c}Личные данные{color}* в поле _Имя и Фамилия_ допускается ввод символов и цифр, например,_11111111111111%_.<br/>
+<br/>
+<br/>
+*Задача на устранение ошибки:* Добавить в разделе *{color:#14892c}Личные данные{color}* в поле _Имя и Фамилия_ валидацию введенных данных на наличие только букв.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10005">      0|i0027z:
+  </td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10004"></td>
+                    </tr>
+
+
+                <tr id="issuerow10508" rel="10508" data-issuekey="PJ-9" class="issuerow">
+                                            <td class="project">    Papa Jones
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="PJ-9" href="http://193.232.45.198:8080/browse/PJ-9">PJ-9</a>
+</td>
+                                            <td class="summary"><p>
+                Пустое содержимое
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Анастасия Бритшева
+    </td>
+                                            <td class="reporter">            Анастасия Бритшева
+    </td>
+                                            <td class="creator">            Анастасия Бритшева
+    </td>
+                                            <td class="created"> 10/июн/18 7:08 PM </td>
+                                            <td class="lastViewed"> 11/июн/18 10:12 AM </td>
+                                            <td class="updated"> 10/июн/18 7:08 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      В разделе *{color:#14892c}Салаты{color}* {color:#14892c}{color:#333333}содержится пустое содержимое, нет ни одного товара.{color}{color}<br/>
+<br/>
+ <br/>
+<br/>
+*Задача на устранение ошибки:* Вывести сообщение для пользователя с причиной отсутствия товаров в разделе.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10005">      0|i0026p:r
+  </td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10004"></td>
+                    </tr>
+
+
+                <tr id="issuerow10507" rel="10507" data-issuekey="PJ-8" class="issuerow">
+                                            <td class="project">    Papa Jones
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="PJ-8" href="http://193.232.45.198:8080/browse/PJ-8">PJ-8</a>
+</td>
+                                            <td class="summary"><p>
+                Кол-во продукции в заказе. Ошибка 2.
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Анастасия Бритшева
+    </td>
+                                            <td class="reporter">            Анастасия Бритшева
+    </td>
+                                            <td class="creator">            Анастасия Бритшева
+    </td>
+                                            <td class="created"> 10/июн/18 6:55 PM </td>
+                                            <td class="lastViewed"> 11/июн/18 10:29 AM </td>
+                                            <td class="updated"> 10/июн/18 7:01 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      1. Выбираем любую продукцию на сайте.<br/>
+<br/>
+2. Добавляем в корзину.<br/>
+<br/>
+3. Нажимаем кнопку *{color:#14892c}Оформить заказ{color}*{color:#14892c}.{color}<br/>
+<br/>
+4. Справа в разделе *{color:#14892c}Ваш заказ{color}* вручную вводим в поле кол-ва любого товара больше 19-ти цифр. Видим, что итоговая сумма товара подсчитывается неверно.<br/>
+<br/>
+*Задача на устранение ошибки:* Сделать ограничение на вводимое кол-во цифр в поле кол-ва товара.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10005">      0|i0026p:i
+  </td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10004"></td>
+                    </tr>
+
+
+                <tr id="issuerow10506" rel="10506" data-issuekey="PJ-7" class="issuerow">
+                                            <td class="project">    Papa Jones
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="PJ-7" href="http://193.232.45.198:8080/browse/PJ-7">PJ-7</a>
+</td>
+                                            <td class="summary"><p>
+                Кол-во продукции в заказе. Ошибка 1.
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Анастасия Бритшева
+    </td>
+                                            <td class="reporter">            Анастасия Бритшева
+    </td>
+                                            <td class="creator">            Анастасия Бритшева
+    </td>
+                                            <td class="created"> 10/июн/18 6:37 PM </td>
+                                            <td class="lastViewed"> 11/июн/18 10:28 AM </td>
+                                            <td class="updated"> 10/июн/18 6:55 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      1. Выбираем любую продукцию на сайте.<br/>
+<br/>
+2. Добавляем в корзину.<br/>
+<br/>
+3. Нажимаем кнопку *{color:#14892c}Оформить заказ{color}*{color:#14892c}.{color}<br/>
+ <br/>
+ 4. Справа в разделе *{color:#14892c}Ваш заказ{color}* вручную вводим в поле кол-ва любого товара больше 2-х цифр, для примера _123_. Видим, что данное поле рассчитано только на две цифры. В данном случае в поле отображаются 2-е последний цифры _23_, а единица скрыта.<br/>
+<br/>
+*Задача на устранение ошибки:* Сделать ограничение на вводимое кол-во цифр в поле кол-ва товара, либо расширить поле кол-ва товара так, чтобы любое введенное пользователем кол-во товара полностью было видно.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10005">      0|i0026p:
+  </td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10004"></td>
+                    </tr>
+
+
+                <tr id="issuerow10504" rel="10504" data-issuekey="PJ-5" class="issuerow">
+                                            <td class="project">    Papa Jones
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="PJ-5" href="http://193.232.45.198:8080/browse/PJ-5">PJ-5</a>
+</td>
+                                            <td class="summary"><p>
+                Способ оплаты
+    </p>
+</td>
+                                            <td class="issuetype">    Задача
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Анастасия Бритшева
+    </td>
+                                            <td class="reporter">            Анастасия Бритшева
+    </td>
+                                            <td class="creator">            Анастасия Бритшева
+    </td>
+                                            <td class="created"> 10/июн/18 5:52 PM </td>
+                                            <td class="lastViewed"> 11/июн/18 10:29 AM </td>
+                                            <td class="updated"> 10/июн/18 6:29 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      1. Выбираем любую продукцию на сайте.<br/>
+<br/>
+2. Добавляем в корзину.<br/>
+<br/>
+3. Нажимаем кнопку *{color:#14892c}Оформить заказ{color}*{color:#14892c}.{color}<br/>
+ <br/>
+ 4. Вводим личные данные.<br/>
+<br/>
+{color:#333333}5. Выбираем любой способ доставки.{color}<br/>
+<br/>
+{color:#333333}6. Выбираем в разделе *{color:#14892c}Время доставки{color}* {color}пункт**{color:#14892c} *Предварительный заказ.*{color}<br/>
+<br/>
+{color:#333333}7. Видим, что {color:#654982}{color:#333333}в разделе *{color:#14892c}Способ оплаты{color}* отсутствует вариант{color} *{color:#14892c}Онлайн оплата,{color}* {color}{color}хотя до выбора варианта {color:#14892c}*Предварительный заказ*{color} в разделе {color:#333333}*{color:#14892c}Время доставки{color}*{color}, вариант оплаты {color:#333333}{color:#654982}*{color:#14892c}Онлайн оплата{color}*{color}{color} присутствовал.<br/>
+<br/>
+ <br/>
+<br/>
+*Задача:* На странице оформления заказа при выборе в разделе *{color:#14892c}Время доставки{color}* {color:#333333}пункта{color}{color:#59afe1} {color}{color:#14892c}*Предварительный заказ*{color} {color:#333333}в разделе {color:#654982}*{color:#14892c}Способ оплаты{color}*{color} нужно добавить вариант {color:#654982}*{color:#14892c}Онлайн оплата.{color}*{color}<br/>
+{color}
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10005">      0|i0026o:
+  </td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10004"></td>
+                    </tr>
+
+
+                <tr id="issuerow10505" rel="10505" data-issuekey="PJ-6" class="issuerow">
+                                            <td class="project">    Papa Jones
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="PJ-6" href="http://193.232.45.198:8080/browse/PJ-6">PJ-6</a>
+</td>
+                                            <td class="summary"><p>
+                Редактирование данных
+    </p>
+</td>
+                                            <td class="issuetype">    Задача
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Анастасия Бритшева
+    </td>
+                                            <td class="reporter">            Анастасия Бритшева
+    </td>
+                                            <td class="creator">            Анастасия Бритшева
+    </td>
+                                            <td class="created"> 10/июн/18 6:17 PM </td>
+                                            <td class="lastViewed"> 10/июн/18 6:29 PM </td>
+                                            <td class="updated"> 10/июн/18 6:29 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      1. Выбираем любую продукцию на сайте.<br/>
+<br/>
+2. Добавляем в корзину.<br/>
+<br/>
+3. Нажимаем кнопку *{color:#14892c}Оформить заказ{color}*{color:#14892c}{color:#333333}.{color}{color}<br/>
+<br/>
+{color:#333333}4. Вводим личные данные.{color}<br/>
+<br/>
+{color:#333333}5. Выбираем способ доставки.{color}<br/>
+<br/>
+{color:#333333}6. Выбираем время доставки и способ оплаты.{color}<br/>
+<br/>
+{color:#333333}7. Нажимаем кнопку{color} *{color:#14892c}Отправить заказ{color}*{color:#14892c}{color:#333333}.{color}{color}<br/>
+<br/>
+{color:#14892c}{color:#333333}8. Повторяем действия с п.1-п.3{color}{color}<br/>
+<br/>
+{color:#14892c}{color:#333333}9. В полях с личными данными (Телефон, Имя и Фамилия, {color}{color}E-mail) находятся данные с предыдущего заказа.<br/>
+<br/>
+{color:#14892c}{color:#333333}При попытке их изменить {color}{color}невозможно внести изменения, поля не редактируются.<br/>
+ <br/>
+*Задача:* Добавить возможность изменять личные данные {color:#14892c}{color:#333333}(Телефон, Имя и Фамилия,{color}{color}<br/>
+E-mail) при 2-ом и последующих заказах в рамках одного авторизованного пользователя.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10005">      0|i0026q:
+  </td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10004"></td>
+                    </tr>
+                </tbody>
+    </table>
+    </issuetable-web-component>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#f5f5f5" colspan="43"><font size="1">
+        Полученный Mon Jun 11 13:09:50 NOVT 2018 Анастасия Бритшева используя JIRA 7.4.3#74005-sha1:d9f4f070125e6f53d367dd8169afdb727b8e7897.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>
